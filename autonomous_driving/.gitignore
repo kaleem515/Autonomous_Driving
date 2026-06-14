@@ -5,9 +5,9 @@ __pycache__/
 *.dll
 *.mp4
 *.pt
-*.weights
-*.avi
-*.zip
-*.tar
-*.gz
+*.h5
+*.keras
+data/
 datasets/
+runs/
+output/

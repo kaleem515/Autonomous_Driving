@@ -1,0 +1,93 @@
+=================================================================
+  AUTONOMOUS DRIVING SYSTEM — COMPLETE EVALUATION REPORT
+  Islamia University of Bahawalpur | CS Department | 2026
+=================================================================
+
+MODULE 1 — LANE DETECTION (OpenCV + CLAHE)
+-----------------------------------------------------------------
+  Overall Detection Rate : 100.0%
+  Left  Lane Rate        : 48.5%
+  Right Lane Rate        : 100.0%
+
+MODULE 2 — TRAFFIC SIGN CNN
+-----------------------------------------------------------------
+  Accuracy         : 99.44%
+  Precision        : 99.46%
+  Recall           : 99.44%
+  F1 Score         : 99.45%
+  Avg Confidence   : 99.48%
+  Prediction Speed : 1956 images/sec
+
+MODULE 3 — OBSTACLE DETECTION (YOLOv8n)
+-----------------------------------------------------------------
+  Model            : YOLOv8n (pretrained COCO)
+  Classes          : car, truck, bus, person, bicycle, motorbike
+  Conf Threshold   : 0.50
+
+PER CLASS BREAKDOWN (CNN):
+=================================================================
+
+                     precision    recall  f1-score   support
+
+           Speed 20       0.98      0.98      0.98        50
+           Speed 30       0.98      1.00      0.99        50
+           Speed 50       1.00      1.00      1.00        50
+           Speed 60       0.98      1.00      0.99        50
+           Speed 70       0.94      0.98      0.96        50
+           Speed 80       1.00      0.98      0.99        50
+       End Speed 80       1.00      1.00      1.00        50
+          Speed 100       1.00      1.00      1.00        50
+          Speed 120       1.00      1.00      1.00        50
+         No Passing       1.00      1.00      1.00        50
+    No Passing 3.5t       1.00      1.00      1.00        50
+      Priority Next       0.93      1.00      0.96        50
+      Priority Road       1.00      1.00      1.00        50
+              Yield       1.00      0.98      0.99        50
+               Stop       1.00      1.00      1.00        50
+        No Vehicles       1.00      1.00      1.00        50
+   No Vehicles 3.5t       1.00      1.00      1.00        50
+           No Entry       1.00      1.00      1.00        50
+    General Caution       1.00      1.00      1.00        50
+         Curve Left       1.00      1.00      1.00        50
+        Curve Right       1.00      1.00      1.00        50
+       Double Curve       1.00      1.00      1.00        50
+         Bumpy Road       1.00      1.00      1.00        50
+      Slippery Road       1.00      0.98      0.99        50
+       Road Narrows       1.00      1.00      1.00        50
+          Road Work       1.00      1.00      1.00        50
+    Traffic Signals       1.00      1.00      1.00        50
+        Pedestrians       1.00      1.00      1.00        50
+  Children Crossing       1.00      1.00      1.00        50
+           Bicycles       1.00      1.00      1.00        50
+           Ice/Snow       1.00      0.92      0.96        50
+       Wild Animals       0.98      1.00      0.99        50
+   End Restrictions       1.00      1.00      1.00        50
+         Turn Right       1.00      1.00      1.00        50
+          Turn Left       1.00      1.00      1.00        50
+         Ahead Only       0.98      1.00      0.99        50
+  Straight or Right       1.00      1.00      1.00        50
+   Straight or Left       1.00      1.00      1.00        50
+         Keep Right       1.00      1.00      1.00        50
+          Keep Left       1.00      0.94      0.97        50
+         Roundabout       1.00      1.00      1.00        50
+     End No Passing       1.00      1.00      1.00        50
+End No Passing 3.5t       1.00      1.00      1.00        50
+
+           accuracy                           0.99      2150
+          macro avg       0.99      0.99      0.99      2150
+       weighted avg       0.99      0.99      0.99      2150
+
+
+TOP 5 BEST CLASSES:
+  Speed 30                       -> 100.0%
+  Speed 50                       -> 100.0%
+  Speed 60                       -> 100.0%
+  End Speed 80                   -> 100.0%
+  Speed 100                      -> 100.0%
+
+TOP 5 WORST CLASSES:
+  Speed 80                       -> 98.0%
+  Yield                          -> 98.0%
+  Slippery Road                  -> 98.0%
+  Keep Left                      -> 94.0%
+  Ice/Snow                       -> 92.0%
